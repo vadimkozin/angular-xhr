@@ -1,0 +1,29 @@
+<div ng-if="!berryLoaded">
+    <span class="glyphicon glyphicon-refresh"></span>
+    Loading...
+</div>
+
+<div ng-if="berryLoaded">
+    <span class="badge">{{ berry.id }}</span>
+        <h1 class="media-heading">{{berry.name | uppercase }}</h1>
+        <p>Размер:
+            {{berry.size}}, время роста:
+            {{berry.growth_time}}, максимальный урожай:
+            {{berry.max_harvest}}
+            </p>
+
+    <input class="form-control" ng-model="berry.name" type="text" placeholder="Имя" required>
+
+    <button class="btn btn-danger" ng-click="deleteBerry(berry.name)">
+            <span class="glyphicon glyphicon-trash"></span>
+            Удалить
+    </button>
+
+</div>
+
+<div class="alert alert-success" role="alert" ng-if="deletionSuccess">Пока, ягода {{berry.name | uppercase}}!</div>
+<div class="alert alert-danger" role="alert" ng-if="deletionError">Ягоды просто так не уходят!</div>
+<hr>
+<!--
+{{berry | json}}
+-->

@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 e5566721bb0bafce419f5af6adc542a189219886 Vadim Kozin <ulin.salma@yandex.ru> 1490167782 +0300	clone: from https://github.com/webmaxru/netology-angular-pokemons/
+e5566721bb0bafce419f5af6adc542a189219886 8f53dcec0a06f580236a15d6562938ba764c2e25 Vadim Kozin <ulin.salma@yandex.ru> 1490271750 +0300	commit: start
+8f53dcec0a06f580236a15d6562938ba764c2e25 31b547730ff5de4c7f5b19594c6b1cca084481d4 Vadim Kozin <ulin.salma@yandex.ru> 1490342044 +0300	commit: second
+31b547730ff5de4c7f5b19594c6b1cca084481d4 c8d6b1f74c7a1455ed809a07ec189885f82cfd03 Vadim Kozin <ulin.salma@yandex.ru> 1490350824 +0300	commit: + BaasService

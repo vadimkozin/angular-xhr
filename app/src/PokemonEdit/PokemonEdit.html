@@ -1,0 +1,42 @@
+<style>
+    .ng-dirty.ng-invalid {
+        border-color: #FA787E;
+    }
+    .ng-dirty.ng-valid {
+        border-color: #78FA89;
+    }
+</style>
+
+<div ng-if="!pokemonLoaded">
+    <span class="glyphicon glyphicon-refresh"></span>
+    Loading...
+</div>
+
+<div ng-if="pokemonLoaded">
+    <h3>Редактирование: <strong>{{pokemon.name | uppercase}}</strong></h3>
+
+    <div class="alert alert-success" role="alert" ng-if="savedSuccess">Привет, покемон {{newPokemonId}}!</div>
+
+    <form name="pokemonForm" novalidate>
+        <div class="form-group">
+            <label>Имя</label>
+            <input class="form-control" ng-model="pokemon.name" type="text" placeholder="Имя" required>
+        </div>
+
+        <div class="form-group">
+            <label>Вес</label>
+            <input class="form-control" ng-model="pokemon.weight" type="text" placeholder="Вес" pattern="^\d{1,}$" required>
+        </div>
+
+        <div class="form-group">
+            <label>Рост</label>
+            <input class="form-control" ng-model="pokemon.height" type="text" placeholder="Рост" pattern="^\d{1,}$" required>
+        </div>
+        
+        <button type="submit" class="btn btn-default" ng-click="savePokemon(pokemon)" ng-disabled="pokemonForm.$invalid">Сохранить</button>
+    </form>
+</div>
+
+<div class="alert alert-success" role="alert" ng-if="savedSuccess">Сохранили покемон!</div>
+<div class="alert alert-danger" role="alert" ng-if="savedError">Покемоны против насилия!</div>
+<!-- {{pokemon | json}} -->
